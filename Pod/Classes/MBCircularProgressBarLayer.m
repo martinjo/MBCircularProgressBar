@@ -13,6 +13,7 @@
 
 @implementation MBCircularProgressBarLayer
 @dynamic value;
+@dynamic animateChanges;
 @dynamic maxValue;
 @dynamic valueFontSize;
 @dynamic unitString;
@@ -139,7 +140,7 @@
 
 - (id<CAAction>)actionForKey:(NSString *)event{
     if ([self presentationLayer] != nil) {
-        if ([event isEqualToString:@"value"]) {
+        if ([event isEqualToString:@"value"] && self.animateChanges) {
             CABasicAnimation *anim = [CABasicAnimation
                                       animationWithKeyPath:@"value"];
             anim.fromValue = [[self presentationLayer]

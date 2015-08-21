@@ -13,6 +13,7 @@
 @property (nonatomic,assign) CGFloat progressAngle;
 @property (nonatomic,assign) CGFloat progressRotationAngle;
 @property (nonatomic,assign) CGFloat value;
+@property (nonatomic,assign) BOOL animateChanges;
 @property (nonatomic,assign) CGFloat maxValue;
 @property (nonatomic,assign) CGFloat valueFontSize;
 @property (nonatomic,assign) CGFloat unitFontSize;

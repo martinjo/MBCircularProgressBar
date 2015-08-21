@@ -72,6 +72,17 @@
     return self.progressLayer.value;
 }
 
+-(void)setAnimateChanges:(BOOL)animateChanges
+{
+    self.progressLayer.animateChanges = animateChanges;
+}
+
+-(BOOL)animateChanges
+{
+    return self.progressLayer.animateChanges;
+}
+
+
 -(void)setMaxValue:(CGFloat)maxValue{
     self.progressLayer.maxValue = maxValue;
     
